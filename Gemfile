@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', '~> 2.2'
-gem 'sinatra-contrib', '~> 2.2'
+gem 'sinatra'
+gem 'sinatra-contrib'
 
 group :development do
-  gem 'ruby-debug-ide', '~> 0.7.0'
-  gem 'debug', "1.5"
+  gem 'ruby-debug-ide'
+  gem 'debug', '1.5'
 end

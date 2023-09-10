@@ -1,5 +1,6 @@
 build:
   hello-world:
+    name: hello-world
     image: ruby:3.2.2
     context: .
 deploy:
