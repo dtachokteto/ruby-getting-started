@@ -1,7 +1,7 @@
 FROM ruby:3.2.2 AS builder
 
 WORKDIR /opt/app
-RUN bundle config set frozen 'true'
+RUN gem install bundle
 RUN bundle install
 
 #######################################
