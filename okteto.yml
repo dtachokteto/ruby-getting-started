@@ -1,9 +1,9 @@
 build:
   hello-world:
-    name: hello-world
-    image: ruby:3.2.2
-    context: .
-    
+     image: okteto.dev/hello-world:latest
+     context: .
+     dockerfile: Dockerfile
+     
 deploy:
   - kubectl apply -f k8s.yml
 dev:

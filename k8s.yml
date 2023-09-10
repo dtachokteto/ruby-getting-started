@@ -12,7 +12,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: ruby:3.2.2
+      - image: okteto.dev/hello-world:latest
         name: hello-world
 
 ---
