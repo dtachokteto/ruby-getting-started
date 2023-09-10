@@ -3,7 +3,7 @@ build:
     name: hello-world
     image: ruby:3.2.2
     context: .
-    dockerfile: ./Dockerfile
+    
 deploy:
   - kubectl apply -f k8s.yml
 dev:
