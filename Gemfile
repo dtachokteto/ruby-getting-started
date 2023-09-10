@@ -5,4 +5,5 @@ gem 'sinatra-contrib', '~> 2.2'
 
 group :development do
   gem 'ruby-debug-ide', '~> 0.7.0'
+  gem 'debug', "1.5"
 end

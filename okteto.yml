@@ -1,6 +1,6 @@
 build:
   hello-world:
-    image: okteto.dev/ruby-hello-world:1.0.0
+    image: ruby:3.2.2
     context: .
 deploy:
   - kubectl apply -f k8s.yml

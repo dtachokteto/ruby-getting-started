@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'debug'
 
 set :bind, '0.0.0.0'
 

@@ -1,7 +1,7 @@
-FROM ruby:2 AS builder
+FROM ruby:3.2.2 AS builder
 
 WORKDIR /opt/app
-COPY Gemfile Gemfile.lock /opt/app/
+#COPY Gemfile Gemfile.lock /opt/app/
 RUN bundle config set frozen 'true'
 RUN bundle install
 
@@ -22,7 +22,7 @@ EXPOSE 8080
 
 #######################################
 
-FROM ruby:2 AS production
+FROM ruby:3.2.2 AS production
 
 WORKDIR /opt/app
 COPY --from=builder /usr/local/ /usr/local/
