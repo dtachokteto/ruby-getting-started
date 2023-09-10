@@ -2,9 +2,9 @@ FROM ruby:3.2.2 AS builder
 
 WORKDIR /opt/app
 RUN gem install bundle
+COPY Gemfile Gemfile.lock /opt/app/
 RUN bundle config set frozen 'true'
-RUN gem install sinatra
-# RUN bundle install
+RUN bundle install
 
 #######################################
 
