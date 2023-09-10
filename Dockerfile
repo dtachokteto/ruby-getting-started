@@ -2,6 +2,9 @@ FROM ruby:3.2.2 AS builder
 
 WORKDIR /opt/app
 RUN gem install bundle
+RUN bundle config set frozen 'true'
+RUN gem install sinatra
+# RUN bundle install
 
 #######################################
 
@@ -14,6 +17,8 @@ ENV RUBYOPT "-W:no-deprecated"
 
 RUN bundle config set with 'development'
 RUN gem install bundle
+WORKDIR /opt/app
+RUN bundle install 
 
 ENV PORT 8080
 EXPOSE 8080
